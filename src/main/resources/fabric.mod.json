@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "bytecraft",
+  "version": "${version}",
+  "name": "ByteCraft",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "Apache-2.0",
+  "icon": "assets/bytecraft/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.starwatercraft.bytecraft.client.BytecraftClient"
+    ],
+    "main": [
+      "org.starwatercraft.bytecraft.Bytecraft"
+    ]
+  },
+  "mixins": [
+    "bytecraft.mixins.json",
+    {
+      "config": "bytecraft.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
